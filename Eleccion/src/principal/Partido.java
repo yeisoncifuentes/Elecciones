@@ -13,15 +13,15 @@ import java.math.*;
  * datos del partido politico 
  */
 public class Partido {
-    private String nombrePartido;
-    private int votosPartido;
+    private String nombre;
+    private int votos;
     private BigDecimal valorCampana;
     /**
      * contructor que inicia la clase partido
      * @param nombrePartido 
      */
     Partido(String nombrePartido, BigDecimal valorCampana){
-        this.nombrePartido=nombrePartido;
+        this.nombre=nombrePartido;
         this.valorCampana=valorCampana;
     }
     /**
@@ -29,7 +29,7 @@ public class Partido {
      * @param nombrePartido 
      */
     public void setNombrePartido(String nombrePartido){
-        this.nombrePartido=nombrePartido;
+        this.nombre=nombrePartido;
         
     }
     /**
@@ -37,29 +37,29 @@ public class Partido {
      * @return 
      */
     public String getNombrePartido(){
-        return this.nombrePartido;
+        return this.nombre;
     }
     /**
      * asignar el valor de votos del partido
      * @param votosPartido 
      */
     public void setVotosPartido(int votosPartido){
-        this.votosPartido=votosPartido;
+        this.votos=votosPartido;
     } 
     /**
      * sirve para imprimir el valor de la variable
      * @return 
      */
     public int getVotosPartido(){
-        return this.votosPartido;
+        return this.votos;
    }
     /**
      * este metodo suma los votos totales del partido
      * @return 
      */
    public int votosPartido(){
-       this.votosPartido++;
-       return this.votosPartido;
+       this.votos++;
+       return this.votos;
    }
    /**
      * asignar el valor de la campaña
