@@ -11,7 +11,7 @@ import java.math.BigDecimal;
  * 03/03/2018
  * esta clase contiene los datos del candidato y los datos de campaña
  */
-public class Candidato {
+public class Candidato extends Partido{
     public String nombre;
     public String apellido;
     public BigDecimal documento;
@@ -34,7 +34,8 @@ public class Candidato {
   * @param ciudadNacimiento 
   */
     
-    Candidato(String nombre,String apellido,BigDecimal documento,int edad, BigDecimal telefono,String direccion, String ciudadNacimiento){
+    Candidato(String nombrePartido,BigDecimal valorCampana,String nombre,String apellido,BigDecimal documento,int edad, BigDecimal telefono,String direccion, String ciudadNacimiento){
+        super( nombrePartido, valorCampana);
         this.nombre=nombre;
         this.apellido=apellido;
         this.documento=documento;
