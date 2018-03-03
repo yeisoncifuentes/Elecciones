@@ -121,28 +121,20 @@ public class Main {
                     }while(escojerCandidato!=0);
                     break;
                 case 2:
-                    System.out.println("Ya conoce la lista de candidatos ");
-                    System.out.println("1. SI ");
-                    System.out.println("2.No ");
+                    System.out.println("CONOCE USTED EL LISTADO DE CANDIDATOS?");
+                    System.out.println("1.SI    2.NO");
                     int conozco=leer.nextInt();
                     while(conozco!=1 && conozco!=2){
-                        System.out.println("Opcion no valida");
+                        System.out.println("OPCION INVALIDA");
                         conozco=leer.nextInt();
-                        
-                    
                     }
                     if(conozco==2){
-                        System.out.println("Se le redigira al menu para que observe la lista de candidatos");
+                        System.out.println("SE LE REDIGIRA AL MENU PARA QUE CONOZCA EL LISTADO DE CANDIDATOS");
                         break;
-                    
                     }
-                     
-                    
-                   System.out.println("Digite el numero del candidato por el cual quiere votar");
-                   int nCandidato=leer.nextInt();
-                   
-                    
-                   switch (nCandidato){
+                    System.out.println("Digite el numero del candidato por el cual quiere votar");
+                    int nCandidato=leer.nextInt();
+                    switch (nCandidato){
                        case 1:
                            System.out.println("GRACIAS POR VOTAR ");
                            obj1.votosCandidato();
@@ -177,14 +169,14 @@ public class Main {
                            System.out.println("GRACIAS POR VOTAR ");
                            obj8.votosCandidato();
                             break;
-                       case 9:
+                        case 9:
                            System.out.println("GRACIAS POR VOTAR ");
                            obj9.votosCandidato();
                            break;
-                       default:
-                           System.out.println("candidato no encontrado");
-                           
-                    System.out.println("Digite el numero del medio publicitario que mas lo influencio");
+                        default:
+                           System.out.println("CANDIDATO NO ENCONTRADO");
+                    }      
+                    System.out.println("INGRESE EL MEDIO PUBLICITARIO QUE MAS LO INFLUENCIO");
                     System.out.println("1. TV");
                     System.out.println("2. Radio");
                     System.out.println("3. Internet");
@@ -194,14 +186,12 @@ public class Main {
                             
                             break;
                         case 2:
+                            
                             break; 
                         case 3:
+                            
                             break;     
                     }
-
-       
-                   }
-                           
                     break;
                 case 3:
                     System.out.println("CANDIDATO 1. VOTOS:"+obj1.getVotosCandidato());
