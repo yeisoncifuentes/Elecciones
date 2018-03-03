@@ -133,7 +133,76 @@ public class Main {
                         break;
                     }
                     System.out.println("Digite el numero del candidato por el cual quiere votar");
-                    int nCandidato=leer.nextInt();
+                   int nCandidato=leer.nextInt();
+                   
+                   
+                    if (nCandidato>0 && nCandidato<=9){
+                        System.out.println("Digite el numero del medio publicitario que mas lo influencio");
+                        System.out.println("1. TV");
+                        System.out.println("2. Radio");
+                        System.out.println("3. Internet");
+                       int medioPublicitario=leer.nextInt();
+                     
+                     while (medioPublicitario!=1 && medioPublicitario!=2 && medioPublicitario!=3 ){
+                        System.out.println("Opcion no valida, intente nuevamente");
+                        medioPublicitario=leer.nextInt();
+                        
+                     }
+                     
+                     switch(medioPublicitario){
+                         case 1:
+                             if (nCandidato==1 || nCandidato==2 ||nCandidato==3){
+                                 obj10.valorCampana(publicidadTv);
+                             }
+                             if (nCandidato==4 || nCandidato==5){
+                                 obj11.valorCampana(publicidadTv);
+                             }
+                             if (nCandidato==6 || nCandidato==7 ){
+                                 obj12.valorCampana(publicidadTv);
+                             }
+                             if (nCandidato==8 || nCandidato==9){
+                                 obj13.valorCampana(publicidadTv);
+                             }
+                             break;
+                         case 2:
+                              if (nCandidato==1 || nCandidato==2 ||nCandidato==3){
+                                 obj10.valorCampana(publicidadRadio);
+                             }
+                             if (nCandidato==4 || nCandidato==5){
+                                 obj11.valorCampana(publicidadRadio);
+                             }
+                             if (nCandidato==6 || nCandidato==7 ){
+                                 obj12.valorCampana(publicidadRadio);
+                             }
+                             if (nCandidato==8 || nCandidato==9){
+                                 obj13.valorCampana(publicidadRadio);
+                             }
+                             break;
+                             
+                             
+                         case 3:
+                             if (nCandidato==1 || nCandidato==2 ||nCandidato==3){
+                                 obj10.valorCampana(publicidadInternet);
+                             }
+                             if (nCandidato==4 || nCandidato==5){
+                                 obj11.valorCampana(publicidadInternet);
+                             }
+                             if (nCandidato==6 || nCandidato==7 ){
+                                 obj12.valorCampana(publicidadInternet);
+                             }
+                             if (nCandidato==8 || nCandidato==9){
+                                 obj13.valorCampana(publicidadInternet);
+                             }
+                             break;
+                             
+                         default:
+                            break;
+                     }
+                    
+                    }
+                   
+                   
+                    
                     switch (nCandidato){
                        case 1:
                            System.out.println("GRACIAS POR VOTAR ");
@@ -176,22 +245,7 @@ public class Main {
                         default:
                            System.out.println("CANDIDATO NO ENCONTRADO");
                     }      
-                    System.out.println("INGRESE EL MEDIO PUBLICITARIO QUE MAS LO INFLUENCIO");
-                    System.out.println("1. TV");
-                    System.out.println("2. Radio");
-                    System.out.println("3. Internet");
-                    int medioPublicitario=leer.nextInt();
-                    switch(medioPublicitario){
-                        case 1:
-                            
-                            break;
-                        case 2:
-                            
-                            break; 
-                        case 3:
-                            
-                            break;     
-                    }
+                    
                     break;
                 case 3:
                     System.out.println("CANDIDATO 1. VOTOS:"+obj1.getVotosCandidato());
@@ -206,6 +260,11 @@ public class Main {
                     
                     break;
                 case 4:
+                    System.out.println("PARTIDO POLO:"+obj10.getValorCampana());
+                    System.out.println("PARTIDO LIBERAL:"+obj11.getValorCampana());
+                    System.out.println("PARTIDO VERDE:"+obj12.getValorCampana());
+                    System.out.println("PARTIDO MIRA:"+obj13.getValorCampana());
+                    
                     break;
                 case 0:
                     System.out.println("-------------------------");
