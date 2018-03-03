@@ -7,9 +7,8 @@ package principal;
 import java.math.*;
 
 /**
- *
- * @author YEISON and cass4
  * version 1.0
+ * @author YEISON and cass465
  * 03/03/2018
  * datos del partido politico 
  */
@@ -17,7 +16,6 @@ public class Partido {
     private String nombrePartido;
     private int votosPartido;
     private BigDecimal valorCampana;
-    
     /**
      * contructor que inicia la clase partido
      * @param nombrePartido 
@@ -26,10 +24,18 @@ public class Partido {
         this.nombrePartido=nombrePartido;
         this.valorCampana=valorCampana;
     }
+    /**
+     * asignar nombre del partido
+     * @param nombrePartido 
+     */
     public void setNombrePartido(String nombrePartido){
         this.nombrePartido=nombrePartido;
         
     }
+    /**
+     * obtener nombre del partido
+     * @return 
+     */
     public String getNombrePartido(){
         return this.nombrePartido;
     }
@@ -39,7 +45,7 @@ public class Partido {
      */
     public void setVotosPartido(int votosPartido){
         this.votosPartido=votosPartido;
-    }
+    } 
     /**
      * sirve para imprimir el valor de la variable
      * @return 
@@ -55,8 +61,6 @@ public class Partido {
        this.votosPartido++;
        return this.votosPartido;
    }
-   
-   
    /**
      * asignar el valor de la campaña
      * @param valorCampana
@@ -70,13 +74,13 @@ public class Partido {
      */
     public BigDecimal getValorCampana(){
         return this.valorCampana;
-   }
+    }
     /**
-     * 
+     * calcular el valor de la campaña del partido
      * @param publicidad
      * @return 
      */
-   public BigDecimal valorCampana(BigDecimal publicidad){
+    public BigDecimal valorCampana(BigDecimal publicidad){
       this.valorCampana=this.valorCampana.add(publicidad);
       System.out.println("valor campana: "+this.valorCampana); 
       return this.valorCampana;

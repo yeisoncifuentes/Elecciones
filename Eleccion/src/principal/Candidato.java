@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 public class Candidato extends Partido{
     public String nombre;
     public String apellido;
-    public BigDecimal documento;
+    public long documento;
     public int edad;
     public BigDecimal telefono;
     public String direccion;
@@ -34,17 +34,15 @@ public class Candidato extends Partido{
   * @param ciudadNacimiento 
   */
     
-    Candidato(String nombrePartido,BigDecimal valorCampana,String nombre,String apellido,BigDecimal documento,int edad, BigDecimal telefono,String direccion, String ciudadNacimiento){
-        super( nombrePartido, valorCampana);
+    Candidato(String nombrePartido,BigDecimal valorCampana,String nombre,String apellido,long documento,int edad, BigDecimal telefono,String direccion, String ciudadNacimiento){
+        super(nombrePartido,valorCampana);
         this.nombre=nombre;
         this.apellido=apellido;
         this.documento=documento;
         this.edad=edad;
         this.telefono=telefono;
         this.direccion=direccion;
-        this.ciudadNacimiento=ciudadNacimiento;
-       
-        
+        this.ciudadNacimiento=ciudadNacimiento;   
     }
     
      /**
@@ -74,14 +72,14 @@ public class Candidato extends Partido{
      * asignar el valor del documento
      * @param documento
      */
-    public void setDocumento(BigDecimal documento){
+    public void setDocumento(long documento){
         this.documento=documento;
     }
     /**
      * sirve para imprimir el valor de la variable nombre
      * @return 
      */
-    public BigDecimal getDocumento(){
+    public long getDocumento(){
         return this.documento;
    
     } 
