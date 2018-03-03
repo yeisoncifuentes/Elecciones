@@ -66,6 +66,7 @@ public class Main {
             System.out.println("2. VOTAR");
             System.out.println("3. MOSTRAR NUMERO DE VOTOS");
             System.out.println("4. MOSTRAR COSTO DE CAMPAÑA POR PARTIDOS");
+            System.out.println("5. MOSTRAR VOTOS DE PARTIDO");
             System.out.println("0. SALIR");
             opcionMenuPrincipal = leer.nextInt();
             System.out.println("_________________________");
@@ -207,40 +208,49 @@ public class Main {
                        case 1:
                            System.out.println("GRACIAS POR VOTAR ");
                            obj1.votosCandidato();
+                           obj10.votosPartido();
                           break;
                        case 2:
                            System.out.println("GRACIAS POR VOTAR ");
                            obj2.votosCandidato();
+                           obj10.votosPartido();
                            break;
                        case 3:
                            System.out.println("GRACIAS POR VOTAR ");
                            obj3.votosCandidato();
+                           obj10.votosPartido();
                            break;
                        case 4:
                            System.out.println("GRACIAS POR VOTAR ");
                            obj4.votosCandidato();
+                           obj11.votosPartido();
                            break;
                        case 5:
                            System.out.println("GRACIAS POR VOTAR ");
                            obj5.votosCandidato();
+                           obj11.votosPartido();
                            break;
                            
                        case 6:
                            System.out.println("GRACIAS POR VOTAR ");
                            obj6.votosCandidato();
+                           obj12.votosPartido();
                            break;
                        case 7:
                            System.out.println("GRACIAS POR VOTAR ");
                            obj7.votosCandidato();
+                           obj12.votosPartido();
                            break;
                        case 8:
                            
                            System.out.println("GRACIAS POR VOTAR ");
                            obj8.votosCandidato();
+                           obj13.votosPartido();
                             break;
                         case 9:
                            System.out.println("GRACIAS POR VOTAR ");
                            obj9.votosCandidato();
+                           obj13.votosPartido();
                            break;
                         default:
                            System.out.println("CANDIDATO NO ENCONTRADO");
@@ -266,6 +276,11 @@ public class Main {
                     System.out.println("PARTIDO MIRA:"+obj13.getValorCampana());
                     
                     break;
+                case 5:
+                    System.out.println(" VOTOS PARTIDO POLO:"+obj10.getVotosPartido());
+                    System.out.println(" VOTOSPARTIDO LIBERAL:"+obj11.getVotosPartido());
+                    System.out.println(" VOTOSPARTIDO VERDE:"+obj12.getVotosPartido());
+                    System.out.println("VOTOS PARTIDO MIRA:"+obj13.getVotosPartido());
                 case 0:
                     System.out.println("-------------------------");
                     System.out.println("EL PROGRAMA HA FINALIZADO");
