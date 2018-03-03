@@ -54,8 +54,8 @@ public class Main {
         
 
         Scanner  leer = new Scanner(System.in);
-        int opcionMenuPrincipal,escojerCandidato;
-        
+        int opcionMenuPrincipal,escojerCandidato,votar;
+        boolean voto=false;
         do{
             System.out.println("1. MOSTRAR DATOS DE CANDIDATO");
             System.out.println("2. VOTAR");
@@ -116,41 +116,192 @@ public class Main {
                     }while(escojerCandidato!=0);
                     break;
                 case 2:
-                    System.out.println("Conoce el numero de los candidatos S/N si no lo conoce lo redigiremos nuevamente al menu");
-                    String desicion=leer.nextLine();
-                     
-                    while(desicion!="S" || desicion!="N" || desicion!="s" || desicion!="n" ) {
-                      System.out.println("Opcion no valida");
-                      desicion=leer.nextLine();
-                    }
-                    if (desicion=="n" || desicion=="N" ){
-                        break;
-                    }
-                   System.out.println("Digite el numero del candidato por el cual quiere votar");
-                   int candidato=leer.nextInt();
-                   switch (candidato){
-                       case 1:
-                           break;
-                       case 2:
-                           break;
-                       case 3:
-                           break;
-                       case 4:
-                           break;
-                       case 5:
-                           break;
-                       case 6:
-                           break;
-                       case 7:
-                           break;
-                       case 8:
-                           break;    
-                       case 9:
-                           break;
-                       default:
-                           System.out.println("candidato no encontrado");
-                   }
-                           
+                    do{
+                        System.out.println("ESCOJA UN CANDIDATO PARA VOTAR (PRIMERO SE MOSTRARAN SUS DATOS Y LUEGO SE DARA LA OPCION DE VOTAR)");
+                        System.out.println("1. CANDIDATO 1");
+                        System.out.println("2. CANDIDATO 2");
+                        System.out.println("3. CANDIDATO 3");
+                        System.out.println("4. CANDIDATO 4");
+                        System.out.println("5. CANDIDATO 5");
+                        System.out.println("6. CANDIDATO 6");
+                        System.out.println("7. CANDIDATO 7");
+                        System.out.println("8. CANDIDATO 8");
+                        System.out.println("9. CANDIDATO 9");
+                        System.out.println("0. SALIR");
+                        escojerCandidato = leer.nextInt();
+                        switch(escojerCandidato){
+                            case 1:
+                                System.out.println(obj1.datosCandidato());
+                                System.out.println("\nDESEA VOTAR POR ESTE CANDIDATO?");
+                                System.out.println("1.SI       2.NO");
+                                votar=leer.nextInt();
+                                switch(votar){
+                                    case 1:
+                                        obj1.getVotosCandidato();
+                                        System.out.println("GRACIAS POR VOTAR\n\n");
+                                        voto=true;
+                                        break;
+                                    case 2:
+                                        System.out.println("");
+                                        break;
+                                    default:
+                                    System.out.println("OPCION INVALIDA");
+                                }
+                                break;
+                            case 2:
+                                System.out.println(obj2.datosCandidato());
+                                System.out.println("\nDESEA VOTAR POR ESTE CANDIDATO?");
+                                System.out.println("1.SI       2.NO");
+                                votar=leer.nextInt();
+                                switch(votar){
+                                    case 1:
+                                        obj2.getVotosCandidato();
+                                        System.out.println("GRACIAS POR VOTAR\n\n");
+                                        voto=true;
+                                        break;
+                                    case 2:
+                                        System.out.println("");
+                                        break;
+                                    default:
+                                    System.out.println("OPCION INVALIDA");
+                                }
+                                break;
+                            case 3:
+                                System.out.println(obj3.datosCandidato());
+                                System.out.println("\nDESEA VOTAR POR ESTE CANDIDATO?");
+                                System.out.println("1.SI       2.NO");
+                                votar=leer.nextInt();
+                                switch(votar){
+                                    case 1:
+                                        obj3.getVotosCandidato();
+                                        System.out.println("GRACIAS POR VOTAR\n\n");
+                                        voto=true;
+                                        break;
+                                    case 2:
+                                        System.out.println("");
+                                        break;
+                                    default:
+                                    System.out.println("OPCION INVALIDA");
+                                }
+                                break;
+                            case 4:
+                                System.out.println(obj4.datosCandidato());
+                                System.out.println("\nDESEA VOTAR POR ESTE CANDIDATO?");
+                                System.out.println("1.SI       2.NO");
+                                votar=leer.nextInt();
+                                switch(votar){
+                                    case 1:
+                                        obj4.getVotosCandidato();
+                                        System.out.println("GRACIAS POR VOTAR\n\n");
+                                        voto=true;
+                                        break;
+                                    case 2:
+                                        System.out.println("");
+                                        break;
+                                    default:
+                                    System.out.println("OPCION INVALIDA");
+                                }
+                                break;
+                            case 5:
+                                System.out.println(obj5.datosCandidato());
+                                System.out.println("\nDESEA VOTAR POR ESTE CANDIDATO?");
+                                System.out.println("1.SI       2.NO");
+                                votar=leer.nextInt();
+                                switch(votar){
+                                    case 1:
+                                        obj5.getVotosCandidato();
+                                        System.out.println("GRACIAS POR VOTAR\n\n");
+                                        voto=true;
+                                        break;
+                                    case 2:
+                                        System.out.println("");
+                                        break;
+                                    default:
+                                    System.out.println("OPCION INVALIDA");
+                                }
+                                break;
+                            case 6:
+                                System.out.println(obj6.datosCandidato());
+                                System.out.println("\nDESEA VOTAR POR ESTE CANDIDATO?");
+                                System.out.println("1.SI       2.NO");
+                                votar=leer.nextInt();
+                                switch(votar){
+                                    case 1:
+                                        obj6.getVotosCandidato();
+                                        System.out.println("GRACIAS POR VOTAR\n\n");
+                                        voto=true;
+                                        break;
+                                    case 2:
+                                        System.out.println("");
+                                        break;
+                                    default:
+                                    System.out.println("OPCION INVALIDA");
+                                }
+                                break;
+                            case 7:
+                                System.out.println(obj7.datosCandidato());
+                                System.out.println("\nDESEA VOTAR POR ESTE CANDIDATO?");
+                                System.out.println("1.SI       2.NO");
+                                votar=leer.nextInt();
+                                switch(votar){
+                                    case 1:
+                                        obj7.getVotosCandidato();
+                                        System.out.println("GRACIAS POR VOTAR\n\n");
+                                        voto=true;
+                                        break;
+                                    case 2:
+                                        System.out.println("");
+                                        break;
+                                    default:
+                                    System.out.println("OPCION INVALIDA");
+                                }
+                                break;
+                            case 8:
+                                System.out.println(obj8.datosCandidato());
+                                System.out.println("\nDESEA VOTAR POR ESTE CANDIDATO?");
+                                System.out.println("1.SI       2.NO");
+                                votar=leer.nextInt();
+                                switch(votar){
+                                    case 1:
+                                        obj8.getVotosCandidato();
+                                        System.out.println("GRACIAS POR VOTAR\n\n");
+                                        voto=true;
+                                        break;
+                                    case 2:
+                                        System.out.println("");
+                                        break;
+                                    default:
+                                    System.out.println("OPCION INVALIDA");
+                                }
+                                break;
+                            case 9:
+                                System.out.println(obj9.datosCandidato());
+                                System.out.println("\nDESEA VOTAR POR ESTE CANDIDATO?");
+                                System.out.println("1.SI       2.NO");
+                                votar=leer.nextInt();
+                                switch(votar){
+                                    case 1:
+                                        obj9.getVotosCandidato();
+                                        System.out.println("GRACIAS POR VOTAR\n\n");
+                                        voto=true;
+                                        break;
+                                    case 2:
+                                        System.out.println("");
+                                        break;
+                                    default:
+                                    System.out.println("OPCION INVALIDA");
+                                }
+                                break;
+                            case 0:
+                                System.out.println("");
+                                break;
+                            default:
+                                System.out.println("OPCION INVALIDA");
+                        }
+                        if(voto==true){
+                            break;
+                        }
+                    }while(escojerCandidato!=0);
                     break;
                 case 3:
                     break;
