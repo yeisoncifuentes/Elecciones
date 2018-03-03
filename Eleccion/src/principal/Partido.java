@@ -81,8 +81,7 @@ public class Partido {
      * @return 
      */
     public BigDecimal valorCampana(BigDecimal publicidad){
-      this.valorCampana=this.valorCampana.add(publicidad);
-      System.out.println("valor campana: "+this.valorCampana); 
+      this.valorCampana=this.valorCampana.add(publicidad); 
       return this.valorCampana;
    }
     
