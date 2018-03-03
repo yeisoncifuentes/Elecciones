@@ -50,9 +50,10 @@ public class Candidato extends Partido{
     public String datosCandidato(){
         
         String datosCandidato=this.numCandidato+"."; 
-        datosCandidato+="\nPartido: "+this.getNombrePartido();
-        datosCandidato+="\nNombre: "+this.nombre;
+        datosCandidato+="\n Partido: "+this.getNombrePartido();
+        datosCandidato+="\n Nombre: "+this.nombre;
         datosCandidato+="\n Apellidos: "+this.apellido;
+        datosCandidato+="\n Documento: "+this.documento;
         datosCandidato+="\n Edad: "+this.edad;
         datosCandidato+="\n Telefono"+this.telefono;
         datosCandidato+="\n Direccion"+this.direccion;

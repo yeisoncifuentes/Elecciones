@@ -54,7 +54,7 @@ public class Main {
         
 
         Scanner  leer = new Scanner(System.in);
-        int opcionMenuPrincipal;
+        int opcionMenuPrincipal,escojerCandidato;
         
         do{
             System.out.println("1. MOSTRAR DATOS DE CANDIDATO");
@@ -66,16 +66,54 @@ public class Main {
             System.out.println("_________________________");
             switch(opcionMenuPrincipal){
                 case 1:
-                    System.out.println(obj1.datosCandidato());
-                    System.out.println(obj2.datosCandidato());
-                    System.out.println(obj3.datosCandidato());
-                    System.out.println(obj4.datosCandidato());
-                    System.out.println(obj5.datosCandidato());
-                    System.out.println(obj6.datosCandidato());
-                    System.out.println(obj7.datosCandidato());
-                    System.out.println(obj8.datosCandidato());
-                    System.out.println(obj9.datosCandidato());
-                    
+                    do{
+                        System.out.println("ESCOJA UN CANDIDATO PARA MOSTRAR SUS DATOS");
+                        System.out.println("1. CANDIDATO 1");
+                        System.out.println("2. CANDIDATO 2");
+                        System.out.println("3. CANDIDATO 3");
+                        System.out.println("4. CANDIDATO 4");
+                        System.out.println("5. CANDIDATO 5");
+                        System.out.println("6. CANDIDATO 6");
+                        System.out.println("7. CANDIDATO 7");
+                        System.out.println("8. CANDIDATO 8");
+                        System.out.println("9. CANDIDATO 9");
+                        System.out.println("0. SALIR");
+                        escojerCandidato = leer.nextInt();
+                        switch(escojerCandidato){
+                            case 1:
+                                System.out.println(obj1.datosCandidato());
+                                break;
+                            case 2:
+                                System.out.println(obj2.datosCandidato());
+                                
+                                break;
+                            case 3:
+                                System.out.println(obj3.datosCandidato());
+                                break;
+                            case 4:
+                                System.out.println(obj4.datosCandidato());
+                                break;
+                            case 5:
+                                System.out.println(obj5.datosCandidato());
+                                break;
+                            case 6:
+                                System.out.println(obj6.datosCandidato());
+                                break;
+                            case 7:
+                                System.out.println(obj7.datosCandidato());
+                                break;
+                            case 8:
+                                System.out.println(obj8.datosCandidato());
+                                break;
+                            case 9:
+                                System.out.println(obj9.datosCandidato());
+                                break;
+                            case 0:
+                                break;
+                            default:
+                                System.out.println("OPCION INVALIDA");
+                        }
+                    }while(escojerCandidato!=0);
                     break;
                 case 2:
                     System.out.println("Conoce el numero de los candidatos S/N si no lo conoce lo redigiremos nuevamente al menu");
