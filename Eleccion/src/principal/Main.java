@@ -78,7 +78,41 @@ public class Main {
                     
                     break;
                 case 2:
-                    
+                    System.out.println("Conoce el numero de los candidatos S/N si no lo conoce lo redigiremos nuevamente al menu");
+                    String desicion=leer.nextLine();
+                     
+                    while(desicion!="S" || desicion!="N" || desicion!="s" || desicion!="n" ) {
+                      System.out.println("Opcion no valida");
+                      desicion=leer.nextLine();
+                    }
+                    if (desicion=="n" || desicion=="N" ){
+                        break;
+                    }
+                   System.out.println("Digite el numero del candidato por el cual quiere votar");
+                   int candidato=leer.nextInt();
+                   switch (candidato){
+                       case 1:
+                           break;
+                       case 2:
+                           break;
+                       case 3:
+                           break;
+                       case 4:
+                           break;
+                       case 5:
+                           break;
+                       case 6:
+                           break;
+                       case 7:
+                           break;
+                       case 8:
+                           break;    
+                       case 9:
+                           break;
+                       default:
+                           System.out.println("candidato no encontrado");
+                   }
+                           
                     break;
                 case 3:
                     break;
