@@ -41,15 +41,15 @@ public class Main {
         BigDecimal publicidadRadio = new BigDecimal("150000");
         BigDecimal publicidadInternet = new BigDecimal("10000");
         
-        Candidato obj1 = new Candidato("Polo", valorPolo, "CARLOS EMILIO", "PEREZ SANCHEZ", 12345678, 40, tel1, "CALLE 6D#28", "BOGOTA");
-        Candidato obj2 = new Candidato("Polo", valorPolo, "JULIAN DAVID", "ORDOÑEZ RODRIGUEZ", 17125367, 45, tel2, "CALLE 4B#26", "BUCARAMANGA");
-        Candidato obj3 = new Candidato("Polo", valorPolo, "JUAN MANUEL", "RINCON GARCIA", 18457125, 50, tel3, "CALLE 15A#76", "MEDELLIN");
-        Candidato obj4 = new Candidato("Liberal", valorPolo, "LEONEL ANDRES", "MENDEZ VELAZQUES", 37456812, 60, tel4, "CALLE 4G#86", "BARRANQUILLA");
-        Candidato obj5 = new Candidato("Liberal", valorPolo, "MARIA CECILIA", "PAEZ CARRILLO", 4236789, 34, tel5, "CALLE 3C#56", "CALI");
-        Candidato obj6 = new Candidato("Verde", valorPolo, "DANIEL STEVEN", "FIGUEROA LARA", 6908560, 47, tel6, "CALLE 5E#87", "TUNJA");
-        Candidato obj7 = new Candidato("Verde", valorPolo, "LAURA CATERINE", "HERNANDEZ RIVERA", 34125134, 56, tel7, "CALLE 8A#34", "CARTAGENA");
-        Candidato obj8 = new Candidato("Mira", valorPolo, "GUSTAVO ENRIQUE", "SUAREZ ALVARADO", 16457893, 38, tel8, "CALLE 6B#24", "BOGOTA");
-        Candidato obj9 = new Candidato("Mira", valorPolo, "KAREN DAYANA", "ROJAS BARRAGAN", 32678123, 49, tel9, "CALLE 3C#14", "MEDELLIN");
+        Candidato obj1 = new Candidato("Polo", valorPolo, "CARLOS EMILIO", "PEREZ SANCHEZ", 12345678, 40, tel1, "CALLE 6D#28", "BOGOTA",1);
+        Candidato obj2 = new Candidato("Polo", valorPolo, "JULIAN DAVID", "ORDOÑEZ RODRIGUEZ", 17125367, 45, tel2, "CALLE 4B#26", "BUCARAMANGA",2);
+        Candidato obj3 = new Candidato("Polo", valorPolo, "JUAN MANUEL", "RINCON GARCIA", 18457125, 50, tel3, "CALLE 15A#76", "MEDELLIN",3);
+        Candidato obj4 = new Candidato("Liberal", valorPolo, "LEONEL ANDRES", "MENDEZ VELAZQUES", 37456812, 60, tel4, "CALLE 4G#86", "BARRANQUILLA",4);
+        Candidato obj5 = new Candidato("Liberal", valorPolo, "MARIA CECILIA", "PAEZ CARRILLO", 4236789, 34, tel5, "CALLE 3C#56", "CALI",5);
+        Candidato obj6 = new Candidato("Verde", valorPolo, "DANIEL STEVEN", "FIGUEROA LARA", 6908560, 47, tel6, "CALLE 5E#87", "TUNJA",6);
+        Candidato obj7 = new Candidato("Verde", valorPolo, "LAURA CATERINE", "HERNANDEZ RIVERA", 34125134, 56, tel7, "CALLE 8A#34", "CARTAGENA",7);
+        Candidato obj8 = new Candidato("Mira", valorPolo, "GUSTAVO ENRIQUE", "SUAREZ ALVARADO", 16457893, 38, tel8, "CALLE 6B#24", "BOGOTA",8);
+        Candidato obj9 = new Candidato("Mira", valorPolo, "KAREN DAYANA", "ROJAS BARRAGAN", 32678123, 49, tel9, "CALLE 3C#14", "MEDELLIN",9);
         //obj1.valorCampana(valor2);
         
 
@@ -63,8 +63,19 @@ public class Main {
             System.out.println("4. MOSTRAR COSTO DE CAMPAÑA POR PARTIDOS");
             System.out.println("0. SALIR");
             opcionMenuPrincipal = leer.nextInt();
+            System.out.println("_________________________");
             switch(opcionMenuPrincipal){
                 case 1:
+                    System.out.println(obj1.datosCandidato());
+                    System.out.println(obj2.datosCandidato());
+                    System.out.println(obj3.datosCandidato());
+                    System.out.println(obj4.datosCandidato());
+                    System.out.println(obj5.datosCandidato());
+                    System.out.println(obj6.datosCandidato());
+                    System.out.println(obj7.datosCandidato());
+                    System.out.println(obj8.datosCandidato());
+                    System.out.println(obj9.datosCandidato());
+                    
                     break;
                 case 2:
                     break;
