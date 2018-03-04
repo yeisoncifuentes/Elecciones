@@ -12,15 +12,15 @@ import java.math.BigDecimal;
  * esta clase contiene los datos del candidato y los datos de campaña
  */
 public class Candidato extends Partido{
-    public int numCandidato;
-    public String nombre;
-    public String apellido;
-    public long documento;
-    public int edad;
-    public BigDecimal telefono;
-    public String direccion;
-    public String ciudadNacimiento;
-    public int votosCandidato;
+    private final int numCandidato;
+    private String nombre;
+    private String apellido;
+    private long documento;
+    private int edad;
+    private BigDecimal telefono;
+    private String direccion;
+    private String ciudadNacimiento;
+    private int votosCandidato;
     /**
      * metodo constructor de la clase Candidato
      * @param nombre
