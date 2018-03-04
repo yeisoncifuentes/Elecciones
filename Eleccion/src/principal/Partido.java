@@ -29,8 +29,7 @@ public class Partido {
      * @param nombrePartido 
      */
     public void setNombrePartido(String nombrePartido){
-        this.nombrePartido=nombrePartido;
-        
+        this.nombrePartido=nombrePartido;    
     }
     /**
      * obtener nombre del partido
@@ -57,11 +56,11 @@ public class Partido {
      * este metodo suma los votos totales del partido
      * @return 
      */
-   public int votosPartido(){
+    public int votosPartido(){
        this.votosPartido++;
        return this.votosPartido;
-   }
-   /**
+    }
+    /**
      * asignar el valor de la campaña
      * @param valorCampana
      */
@@ -83,12 +82,9 @@ public class Partido {
     public BigDecimal valorCampana(BigDecimal publicidad){
       this.valorCampana=this.valorCampana.add(publicidad); 
       return this.valorCampana;
-   }
-    
-    
-    
-    
-            
-    
-    
+    }
+    @Override
+    public String toString(){
+        return " DATO CARGADO";
+    }
 }

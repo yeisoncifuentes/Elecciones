@@ -20,21 +20,17 @@ public class Candidato extends Partido{
     public BigDecimal telefono;
     public String direccion;
     public String ciudadNacimiento;
-    
     public int votosCandidato;
-    
-    
- /**
-  * metodo constructor de la clase Candidato
-  * @param nombre
-  * @param apellido
-  * @param documento
-  * @param edad
-  * @param telefono
-  * @param direccion
-  * @param ciudadNacimiento 
-  */
-    
+    /**
+     * metodo constructor de la clase Candidato
+     * @param nombre
+     * @param apellido
+     * @param documento
+     * @param edad
+     * @param telefono
+     * @param direccion
+     * @param ciudadNacimiento 
+     */
     Candidato(String nombrePartido,BigDecimal valorCampana,String nombre,String apellido,long documento,int edad, BigDecimal telefono,String direccion, String ciudadNacimiento,int numCandidato){
         super(nombrePartido,valorCampana );
         this.numCandidato=numCandidato;
@@ -46,9 +42,11 @@ public class Candidato extends Partido{
         this.direccion=direccion;
         this.ciudadNacimiento=ciudadNacimiento;   
     }
-    
-    public String datosCandidato(){
-        
+    /**
+     * mostrar los datos de cada candidato
+     * @return 
+     */
+    public String datosCandidato(){   
         String datosCandidato=this.numCandidato+"."; 
         datosCandidato+="\n PARTIDO: "+this.getNombrePartido();
         datosCandidato+="\n NOMBRE: "+this.nombre;
@@ -61,8 +59,7 @@ public class Candidato extends Partido{
         datosCandidato+="\n_________________________\n";
         return datosCandidato;
     }
-    
-     /**
+    /**
      * asignar el valor del nombre
      * @param nombre
      */
@@ -75,16 +72,15 @@ public class Candidato extends Partido{
      */
     public String getNombre(){
         return this.nombre;
-   }
+    }
     
-     /**
+    /**
      * asignar el valor del apellido
      * @param apellido
      */
     public void setApellido(String apellido){
         this.apellido=apellido;
     }
-    
     /**
      * asignar el valor del documento
      * @param documento
@@ -98,7 +94,6 @@ public class Candidato extends Partido{
      */
     public long getDocumento(){
         return this.documento;
-   
     } 
     /**
      * asignar el valor de la edad
@@ -113,7 +108,7 @@ public class Candidato extends Partido{
      */
     public int getEdad(){
         return this.edad;
-   }
+    }
     
     /**
      * asignar el valor de la edad
@@ -128,8 +123,7 @@ public class Candidato extends Partido{
      */
     public BigDecimal getTelefono(){
         return this.telefono;
-   }
-    
+    }
     /**
      * asignar el valor de la direccion
      * @param direccion
@@ -143,8 +137,7 @@ public class Candidato extends Partido{
      */
     public String getDireccion(){
         return this.direccion;
-   }
-    
+    }
     /**
      * asignar el valor de la edad
      * @param ciudadNacimiento
@@ -158,9 +151,7 @@ public class Candidato extends Partido{
      */
     public String getCiudadNacimiento(){
         return this.ciudadNacimiento;
-   }
-    
-   
+    }
     /**
      * asignar el valor de la edad
      * @param votosCandidato
@@ -174,8 +165,7 @@ public class Candidato extends Partido{
      */
     public int getVotosCandidato(){
         return this.votosCandidato;
-   }
-    
+    }
     /**
      * este metodo suma los votos totales del candidato
      * @return 
@@ -184,6 +174,8 @@ public class Candidato extends Partido{
         this.votosCandidato++;
         return this.votosCandidato;
     }
-    
-    
+    @Override
+    public String toString(){
+        return "DATOS CARGADOS";
+    }
 }

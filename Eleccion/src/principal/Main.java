@@ -50,14 +50,12 @@ public class Main {
         Candidato obj7 = new Candidato("Verde", valorPolo, "LAURA CATERINE", "HERNANDEZ RIVERA", 34125134, 56, tel7, "CALLE 8A#34", "CARTAGENA",7);
         Candidato obj8 = new Candidato("Mira", valorPolo, "GUSTAVO ENRIQUE", "SUAREZ ALVARADO", 16457893, 38, tel8, "CALLE 6B#24", "BOGOTA",8);
         Candidato obj9 = new Candidato("Mira", valorPolo, "KAREN DAYANA", "ROJAS BARRAGAN", 32678123, 49, tel9, "CALLE 3C#14", "MEDELLIN",9);
-        //obj1.valorCampana(valor2);
+        
         Partido obj10= new Partido("Polo", valorPolo);
         Partido obj11= new Partido("Liberal", valorLiberal);
         Partido obj12= new Partido("Verde", valorVerde);
         Partido obj13= new Partido("Mira", valorMira);
         
-        
-
         Scanner  leer = new Scanner(System.in);
         int opcionMenuPrincipal,escojerCandidato;
         
@@ -88,31 +86,39 @@ public class Main {
                         switch(escojerCandidato){
                             case 1:
                                 System.out.println(obj1.datosCandidato());
+                                System.out.println(obj1.toString());
                                 break;
                             case 2:
                                 System.out.println(obj2.datosCandidato());
-                                
+                                System.out.println(obj2.toString());
                                 break;
                             case 3:
                                 System.out.println(obj3.datosCandidato());
+                                System.out.println(obj3.toString());
                                 break;
                             case 4:
                                 System.out.println(obj4.datosCandidato());
+                                System.out.println(obj4.toString());
                                 break;
                             case 5:
                                 System.out.println(obj5.datosCandidato());
+                                System.out.println(obj5.toString());
                                 break;
                             case 6:
                                 System.out.println(obj6.datosCandidato());
+                                System.out.println(obj6.toString());
                                 break;
                             case 7:
                                 System.out.println(obj7.datosCandidato());
+                                System.out.println(obj7.toString());
                                 break;
                             case 8:
                                 System.out.println(obj8.datosCandidato());
+                                System.out.println(obj8.toString());
                                 break;
                             case 9:
                                 System.out.println(obj9.datosCandidato());
+                                System.out.println(obj9.toString());
                                 break;
                             case 0:
                                 break;
@@ -134,128 +140,112 @@ public class Main {
                         break;
                     }
                     System.out.println("Digite el numero del candidato por el cual quiere votar");
-                   int nCandidato=leer.nextInt();
-                   
-                   
+                    int nCandidato=leer.nextInt();
                     if (nCandidato>0 && nCandidato<=9){
                         System.out.println("Digite el numero del medio publicitario que mas lo influencio");
                         System.out.println("1. TV");
                         System.out.println("2. Radio");
                         System.out.println("3. Internet");
-                       int medioPublicitario=leer.nextInt();
-                     
-                     while (medioPublicitario!=1 && medioPublicitario!=2 && medioPublicitario!=3 ){
-                        System.out.println("Opcion no valida, intente nuevamente");
-                        medioPublicitario=leer.nextInt();
-                        
-                     }
-                     
-                     switch(medioPublicitario){
-                         case 1:
-                             if (nCandidato==1 || nCandidato==2 ||nCandidato==3){
-                                 obj10.valorCampana(publicidadTv);
-                             }
-                             if (nCandidato==4 || nCandidato==5){
-                                 obj11.valorCampana(publicidadTv);
-                             }
-                             if (nCandidato==6 || nCandidato==7 ){
-                                 obj12.valorCampana(publicidadTv);
-                             }
-                             if (nCandidato==8 || nCandidato==9){
-                                 obj13.valorCampana(publicidadTv);
-                             }
-                             break;
-                         case 2:
-                              if (nCandidato==1 || nCandidato==2 ||nCandidato==3){
-                                 obj10.valorCampana(publicidadRadio);
-                             }
-                             if (nCandidato==4 || nCandidato==5){
-                                 obj11.valorCampana(publicidadRadio);
-                             }
-                             if (nCandidato==6 || nCandidato==7 ){
-                                 obj12.valorCampana(publicidadRadio);
-                             }
-                             if (nCandidato==8 || nCandidato==9){
-                                 obj13.valorCampana(publicidadRadio);
-                             }
-                             break;
-                             
-                             
-                         case 3:
-                             if (nCandidato==1 || nCandidato==2 ||nCandidato==3){
-                                 obj10.valorCampana(publicidadInternet);
-                             }
-                             if (nCandidato==4 || nCandidato==5){
-                                 obj11.valorCampana(publicidadInternet);
-                             }
-                             if (nCandidato==6 || nCandidato==7 ){
-                                 obj12.valorCampana(publicidadInternet);
-                             }
-                             if (nCandidato==8 || nCandidato==9){
-                                 obj13.valorCampana(publicidadInternet);
-                             }
-                             break;
-                             
-                         default:
-                            break;
-                     }
-                    
+                        int medioPublicitario=leer.nextInt();
+                        while (medioPublicitario!=1 && medioPublicitario!=2 && medioPublicitario!=3 ){
+                            System.out.println("Opcion no valida, intente nuevamente");
+                            medioPublicitario=leer.nextInt();    
+                        }
+                        switch(medioPublicitario){
+                            case 1:
+                                if (nCandidato==1 || nCandidato==2 ||nCandidato==3){
+                                    obj10.valorCampana(publicidadTv);
+                                }
+                                if (nCandidato==4 || nCandidato==5){
+                                    obj11.valorCampana(publicidadTv);
+                                }
+                                if (nCandidato==6 || nCandidato==7 ){
+                                    obj12.valorCampana(publicidadTv);
+                                }
+                                if (nCandidato==8 || nCandidato==9){
+                                    obj13.valorCampana(publicidadTv);
+                                }
+                                break;
+                            case 2:
+                                 if (nCandidato==1 || nCandidato==2 ||nCandidato==3){
+                                    obj10.valorCampana(publicidadRadio);
+                                }
+                                if (nCandidato==4 || nCandidato==5){
+                                    obj11.valorCampana(publicidadRadio);
+                                }
+                                if (nCandidato==6 || nCandidato==7 ){
+                                    obj12.valorCampana(publicidadRadio);
+                                }
+                                if (nCandidato==8 || nCandidato==9){
+                                    obj13.valorCampana(publicidadRadio);
+                                }
+                                break;
+                            case 3:
+                                if (nCandidato==1 || nCandidato==2 ||nCandidato==3){
+                                    obj10.valorCampana(publicidadInternet);
+                                }
+                                if (nCandidato==4 || nCandidato==5){
+                                    obj11.valorCampana(publicidadInternet);
+                                }
+                                if (nCandidato==6 || nCandidato==7 ){
+                                    obj12.valorCampana(publicidadInternet);
+                                }
+                                if (nCandidato==8 || nCandidato==9){
+                                    obj13.valorCampana(publicidadInternet);
+                                }
+                                break;
+                        }
                     }
-                   
-                   
-                    
                     switch (nCandidato){
-                       case 1:
-                           System.out.println("GRACIAS POR VOTAR ");
-                           obj1.votosCandidato();
-                           obj10.votosPartido();
-                          break;
-                       case 2:
-                           System.out.println("GRACIAS POR VOTAR ");
-                           obj2.votosCandidato();
-                           obj10.votosPartido();
-                           break;
-                       case 3:
-                           System.out.println("GRACIAS POR VOTAR ");
-                           obj3.votosCandidato();
-                           obj10.votosPartido();
-                           break;
-                       case 4:
-                           System.out.println("GRACIAS POR VOTAR ");
-                           obj4.votosCandidato();
-                           obj11.votosPartido();
-                           break;
-                       case 5:
-                           System.out.println("GRACIAS POR VOTAR ");
-                           obj5.votosCandidato();
-                           obj11.votosPartido();
-                           break;
-                           
-                       case 6:
-                           System.out.println("GRACIAS POR VOTAR ");
-                           obj6.votosCandidato();
-                           obj12.votosPartido();
-                           break;
-                       case 7:
-                           System.out.println("GRACIAS POR VOTAR ");
-                           obj7.votosCandidato();
-                           obj12.votosPartido();
-                           break;
-                       case 8:
-                           
-                           System.out.println("GRACIAS POR VOTAR ");
-                           obj8.votosCandidato();
-                           obj13.votosPartido();
+                        case 1:
+                            System.out.println("GRACIAS POR VOTAR ");
+                            obj1.votosCandidato();
+                            obj10.votosPartido();
                             break;
-                        case 9:
-                           System.out.println("GRACIAS POR VOTAR ");
-                           obj9.votosCandidato();
-                           obj13.votosPartido();
-                           break;
-                        default:
-                           System.out.println("CANDIDATO NO ENCONTRADO");
+                        case 2:
+                            System.out.println("GRACIAS POR VOTAR ");
+                            obj2.votosCandidato();
+                            obj10.votosPartido();
+                            break;
+                        case 3:
+                            System.out.println("GRACIAS POR VOTAR ");
+                            obj3.votosCandidato();
+                            obj10.votosPartido();
+                            break;
+                        case 4:
+                            System.out.println("GRACIAS POR VOTAR ");
+                            obj4.votosCandidato();
+                            obj11.votosPartido();
+                            break;
+                        case 5:
+                            System.out.println("GRACIAS POR VOTAR ");
+                            obj5.votosCandidato();
+                            obj11.votosPartido();
+                            break;
+
+                        case 6:
+                            System.out.println("GRACIAS POR VOTAR ");
+                            obj6.votosCandidato();
+                            obj12.votosPartido();
+                            break;
+                        case 7:
+                            System.out.println("GRACIAS POR VOTAR ");
+                            obj7.votosCandidato();
+                            obj12.votosPartido();
+                            break;
+                        case 8:
+                            System.out.println("GRACIAS POR VOTAR ");
+                            obj8.votosCandidato();
+                            obj13.votosPartido();
+                            break;
+                         case 9:
+                            System.out.println("GRACIAS POR VOTAR ");
+                            obj9.votosCandidato();
+                            obj13.votosPartido();
+                            break;
+                         default:
+                            System.out.println("CANDIDATO NO ENCONTRADO");
                     }      
-                    
                     break;
                 case 3:
                     System.out.println("CANDIDATO 1. VOTOS:"+obj1.getVotosCandidato());
@@ -267,20 +257,18 @@ public class Main {
                     System.out.println("CANDIDATO 7. VOTOS:"+obj7.getVotosCandidato());
                     System.out.println("CANDIDATO 8. VOTOS:"+obj8.getVotosCandidato());
                     System.out.println("CANDIDATO 9. VOTOS:"+obj9.getVotosCandidato());
-                    
                     break;
                 case 4:
-                    System.out.println("PARTIDO POLO:"+obj10.getValorCampana());
-                    System.out.println("PARTIDO LIBERAL:"+obj11.getValorCampana());
-                    System.out.println("PARTIDO VERDE:"+obj12.getValorCampana());
-                    System.out.println("PARTIDO MIRA:"+obj13.getValorCampana());
-                    
+                    System.out.println("PARTIDO POLO:"+obj10.getValorCampana()+obj10.toString());
+                    System.out.println("PARTIDO LIBERAL:"+obj11.getValorCampana()+obj11.toString());
+                    System.out.println("PARTIDO VERDE:"+obj12.getValorCampana()+obj12.toString());
+                    System.out.println("PARTIDO MIRA:"+obj13.getValorCampana()+obj13.toString());
                     break;
                 case 5:
-                    System.out.println(" VOTOS PARTIDO POLO:"+obj10.getVotosPartido());
-                    System.out.println(" VOTOSPARTIDO LIBERAL:"+obj11.getVotosPartido());
-                    System.out.println(" VOTOSPARTIDO VERDE:"+obj12.getVotosPartido());
-                    System.out.println("VOTOS PARTIDO MIRA:"+obj13.getVotosPartido());
+                    System.out.println(" VOTOS PARTIDO POLO:"+obj10.getVotosPartido()+obj10.toString());
+                    System.out.println(" VOTOSPARTIDO LIBERAL:"+obj11.getVotosPartido()+obj11.toString());
+                    System.out.println(" VOTOSPARTIDO VERDE:"+obj12.getVotosPartido()+obj12.toString());
+                    System.out.println("VOTOS PARTIDO MIRA:"+obj13.getVotosPartido()+obj13.toString());
                 case 0:
                     System.out.println("-------------------------");
                     System.out.println("EL PROGRAMA HA FINALIZADO");
@@ -290,9 +278,5 @@ public class Main {
                     System.out.println("OPCION INVALIDA");
             }
         }while(opcionMenuPrincipal!=0);
-
-    }
-    
-    
-    
+    }    
 }
